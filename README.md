@@ -32,3 +32,4 @@ The evaluation metrics are as follows:
 ### Sentiment Analysis
 I used `distiluse-base-multilingual-cased-v1` which is good for generating embeddings for large texts on low computation power. I added a dropout layer preceding the fully-connected dense layer in the novel architecture. The puspose of adding a dropout layer was to reduce the computational cost and minimize the overfitting of the model. The fully connected dense layer was added to retain the context of each text prompt. As I mentioned earlier, the dataset for sentiment analysis is different from the one used for similarity deteciton. In similarity detection, I used Quora question pair dataset while in sentiment analysis, I used positive and negative reviews of the TV-Shows.
 
+![Approach_screenshot](https://github.com/MohtashimButt/FineTunedSBERT/blob/master/SBERT.png)
