@@ -17,6 +17,16 @@ Now that I've used a pre-trained model and saw how it performed (without any tra
 ![Approach_screenshot](https://github.com/MohtashimButt/FineTunedSBERT/blob/master/approach2.png)
 
 The calculated confusion matrix after comparing the results from the predicted labels with the actual labels given in the data is as follows:
+
 ![Approach_screenshot](https://github.com/MohtashimButt/FineTunedSBERT/blob/master/conf_mat.png)
+
+The evaluation metrics are as follows:
+
+| Metric | Value |
+| -------- | -------- |
+| Accuracy | 0.7397111111111111 |
+| Precision | 0.635419469407523 |
+| Recall | 0.7051236116087424 |
+| F1 Score | 0.6684593393529394 |
 
 ### Sentiment Analysis
