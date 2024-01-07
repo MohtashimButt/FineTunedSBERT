@@ -8,5 +8,7 @@ Furthermore, I fine-tuned the SBERT architecture, tailored specifically to the d
 
 ## Methodology
 I used Sentence-BERT (SBERT) model – a modification of the pretrained BERT network that uses siamese and triplet network structures to derive semantically meaningful sentence embeddings that can be compared using cosine-similarity – to calculate our text embeddings. Our pipeline for pre-trained model was as follows:
+
 ![Approach_screenshot](https://github.com/MohtashimButt/FineTunedSBERT/blob/master/approach.png)
+
 I then calculated the confusion matrix after comparing the results from the predicted labels with the actual labels given in the data. That confusion matrix was used to calculate the evaluation metrics mentioned below.
