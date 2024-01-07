@@ -33,3 +33,22 @@ The evaluation metrics are as follows:
 I used `distiluse-base-multilingual-cased-v1` which is good for generating embeddings for large texts on low computation power. I added a dropout layer preceding the fully-connected dense layer in the novel architecture. The puspose of adding a dropout layer was to reduce the computational cost and minimize the overfitting of the model. The fully connected dense layer was added to retain the context of each text prompt. As I mentioned earlier, the dataset for sentiment analysis is different from the one used for similarity deteciton. In similarity detection, I used Quora question pair dataset while in sentiment analysis, I used positive and negative reviews of the TV-Shows.
 
 ![Approach_screenshot](https://github.com/MohtashimButt/FineTunedSBERT/blob/master/SBERT.png)
+
+The model gives the following outputs on the below mentioned testing statements:
+'I love being a human being. We should live in peace.' has positive sentiments
+'Wage war and kill people in blood' has negative sentiments
+
+The evaluation report is as follows:
+
+| Metric | Value |
+| -------- | -------- |
+| Accuracy | 0.62 |
+| Precision | 0.63 |
+| Recall | 0.61 |
+| F1 Score | 0.62 |
+
+## Limitations and Discussion
+The key limitations in the project are as follows:
+- The dataset used was for movies/TV-Show reviews that represents sentiments including the words specific to the showbiz. If the model is given the prompts that do not have any context in the showbiz world, it won't be able to recognize its sentiments.
+- Due to the computational limits I had, the dataset size was small over which a world-class model like BERT cannot be trained enough to give meaningful accuracy. That is why the evaluation metrics are not that good.
+- Although the classification is working is pretty well but the primary use-case of state-of-the-art BERT model does lie in sentiment analysis. Hence, the results would've been better if I had used some other language model for embedding generation. 
